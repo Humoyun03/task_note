@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,7 +43,12 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
           child: Row(
             children: [
 
-              Icon(Icons.arrow_back_outlined,color: Colors.white,),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Icon(Icons.arrow_back_outlined,color: Colors.white,)),
               SizedBox(width: 20,),
               Text("Add Task",style: GoogleFonts.jost(fontSize:25,fontWeight:FontWeight.w600,color : Colors.white),)
             ],

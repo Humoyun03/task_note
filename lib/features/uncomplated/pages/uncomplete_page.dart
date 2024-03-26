@@ -49,7 +49,12 @@ class _UnCompletePageState extends State<UnCompletePage> {
             title: Container(
               child: Row(
                 children: [
-                  Icon(Icons.arrow_back_outlined,color: Colors.white,),
+                  GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.arrow_back_outlined,color: Colors.white,)),
                   SizedBox(width: 20,),
                   Text("UnCompleted Task",style: GoogleFonts.jost(fontSize:25,fontWeight:FontWeight.w600,color : Colors.white),)
                 ],

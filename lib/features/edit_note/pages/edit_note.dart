@@ -42,7 +42,12 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
         automaticallyImplyLeading: false,
         title:Row(
           children: [
-            Icon(Icons.arrow_back_outlined,color: Colors.white,),
+            GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: Icon(Icons.arrow_back_outlined,color: Colors.white,)),
             SizedBox(width: 20,),
             Text("Edit Task",style: GoogleFonts.jost(fontSize:25,fontWeight:FontWeight.w600, color : Colors.white),)
           ],
