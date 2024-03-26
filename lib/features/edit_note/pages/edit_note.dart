@@ -39,11 +39,10 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF8C8EC9),
-        actions: [
-
-        ],
+        automaticallyImplyLeading: false,
         title:Row(
           children: [
+            Icon(Icons.arrow_back_outlined,color: Colors.white,),
             SizedBox(width: 20,),
             Text("Edit Task",style: GoogleFonts.jost(fontSize:25,fontWeight:FontWeight.w600, color : Colors.white),)
           ],

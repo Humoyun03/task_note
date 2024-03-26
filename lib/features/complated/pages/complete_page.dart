@@ -43,10 +43,12 @@ class _CompletePageState extends State<CompletePage> {
         return Scaffold(
           backgroundColor: Color(0xFFD5D6EE),
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Color(0xFF8C8EC9),
             title: Container(
               child: Row(
                 children: [
+                  Icon(Icons.arrow_back_outlined,color: Colors.white,),
                   SizedBox(width: 20,),
                   Text("Completed Task",style: GoogleFonts.jost(fontSize:25,fontWeight:FontWeight.w600,color : Colors.white),)
                 ],
